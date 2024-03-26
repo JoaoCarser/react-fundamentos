@@ -2,10 +2,11 @@ import React from 'react'
 
 function Teste (){
     return (
-        <div>
-            <h1>Hello World!</h1>
-        </div>
+        <>
+            <h1>Hello World</h1>
+            <h2>subTitle</h2>
+        </>
     )
 }
 
-export default Teste;
+export default Teste; 
