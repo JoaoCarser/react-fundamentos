@@ -14,4 +14,16 @@ function Post(props){
     )
 }
 
+
+// 'PROPTYPES' RESPONSAVEL PELA TIPAGEM DAS PROPRIEDADES
+Post.propTypes = {
+    likes: PropTypes.number.isRequired,
+    post: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        subtitle: PropTypes.string.isRequired,
+    }).isRequired,
+}
+
+
+
 export default Post;
