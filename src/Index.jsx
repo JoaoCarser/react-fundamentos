@@ -4,15 +4,11 @@ import Post from './Post';
 const tituloZeroUm = 'Titulo zero um'
 
 
-function Teste (){
+function Index (){
     return (
         <>
-            <h1>Carser's Blog</h1>
-            <h2>Posts da semana</h2>
-
-            <hr />
-
-            <Post post={{
+            
+            <Post likes={20} post={{
                 title: "Título 1",
                 subtitle: 'Subtitle 1'
             }}/>
@@ -25,12 +21,8 @@ function Teste (){
                 subtitle: 'Subtitle 3'
             }}/>
 
-            
-
-            
-
         </>
     );
 }
 
-export default Teste; 
+export default Index; 
