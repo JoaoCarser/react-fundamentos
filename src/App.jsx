@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Teste from './Teste.jsx'
+import Index from './Index.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Teste />
+    <Index />
   </React.StrictMode>,
 )
