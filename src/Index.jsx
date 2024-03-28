@@ -9,24 +9,20 @@ function Index() {
     { id: Math.random(), title: "Titulo 3", subtitle: "Subtitle 3", likes: 50 },
   ]);
 
-  console.log({posts});
+  console.log({ posts });
 
   function handleRefresh() {
-    // posts.push({
-    //   id: Math.random(),
-    //   title: `Titulo ${posts.length + 1}`,
-    //   subtitle: `Subtitle ${posts.length + 1}`,
-    //   likes: 30,
-    // });
-
-    setPosts([...posts, 
+    setTimeout(() => {
+      setPosts((prevState) => [
+        ...prevState,
         {
-            id: Math.random(),
-            title: `Titulo: ${posts.length +1}`,
-            subtitle: `Subtitle: ${posts.length +1}`,
-            likes: 50,
-            
-        }]);
+          id: Math.random(),
+          title: `Titulo: ${prevState.length + 1}`,
+          subtitle: `Subtitle: ${prevState.length + 1}`,
+          likes: 50,
+        },
+      ]);
+    }, 2000);
 
     console.log(posts);
   }

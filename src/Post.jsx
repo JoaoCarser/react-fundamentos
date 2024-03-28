@@ -5,7 +5,7 @@ function Post(props){
     return(
         <>
             <article>
-                <strong>{props.post.title}</strong> <br />
+                <strong>{props.post.title}</strong> <button>Remover</button> <br />
                 <small>{props.post.subtitle}</small> <br />
                 Média : {props.likes / 2} <br />
             </article>
