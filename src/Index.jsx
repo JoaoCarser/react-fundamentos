@@ -12,20 +12,29 @@ function Index() {
   console.log({ posts });
 
   function handleRefresh() {
-    setTimeout(() => {
-      setPosts((prevState) => [
-        ...prevState,
-        {
-          id: Math.random(),
-          title: `Titulo: ${prevState.length + 1}`,
-          subtitle: `Subtitle: ${prevState.length + 1}`,
-          likes: 50,
-        },
-      ]);
-    }, 2000);
+    setPosts((prevState) => [
+      ...prevState,
+      {
+        id: Math.random(),
+        title: `Titulo: ${prevState.length + 1}`,
+        subtitle: `Subtitle: ${prevState.length + 1}`,
+        likes: 50,
+      },
+    ]);
 
     console.log(posts);
   }
+
+
+  function handleRemovePost(postId){
+    setPosts((prevState) => (
+        prevState.filter(post => post.id !== postId)
+    ));
+  }
+
+
+
+
   return (
     <>
       <Header title="Carser's Blog">
@@ -38,7 +47,9 @@ function Index() {
         <Post
           key={post.id}
           likes={post.likes}
+          onRemove={handleRemovePost}
           post={{
+            id: post.id,
             title: post.title,
             subtitle: post.subtitle,
           }}
