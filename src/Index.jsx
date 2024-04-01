@@ -4,9 +4,9 @@ import Header from "./Header.jsx";
 
 function Index() {
   const [posts, setPosts] = useState([
-    { id: Math.random(), title: "Titulo 1", subtitle: "Subtitle 1", likes: 20 },
-    { id: Math.random(), title: "Titulo 2", subtitle: "Subtitle 2", likes: 10 },
-    { id: Math.random(), title: "Titulo 3", subtitle: "Subtitle 3", likes: 50 },
+    { id: Math.random(), title: "Titulo 1", subtitle: "Subtitle 1", likes: 20, read: false},
+    { id: Math.random(), title: "Titulo 2", subtitle: "Subtitle 2", likes: 10, read: true},
+    { id: Math.random(), title: "Titulo 3", subtitle: "Subtitle 3", likes: 50, read: false},
   ]);
 
   console.log({ posts });
@@ -46,13 +46,8 @@ function Index() {
       {posts.map((post) => (
         <Post
           key={post.id}
-          likes={post.likes}
           onRemove={handleRemovePost}
-          post={{
-            id: post.id,
-            title: post.title,
-            subtitle: post.subtitle,
-          }}
+          post={post}
         />
       ))}
     </>
