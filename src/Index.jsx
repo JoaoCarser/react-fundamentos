@@ -19,6 +19,7 @@ function Index() {
         title: `Titulo: ${prevState.length + 1}`,
         subtitle: `Subtitle: ${prevState.length + 1}`,
         likes: 50,
+        read: false,
       },
     ]);
 
