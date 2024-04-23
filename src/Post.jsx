@@ -14,8 +14,13 @@ function Post(props) {
                 read: props.post.read,
             }}
         />
+
+
         <br />
+        
+    
         <small>{props.post.subtitle}</small> <br />
+        
         Média : {props.post.likes / 2} <br />
       </article>
       <br />

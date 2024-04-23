@@ -9,7 +9,11 @@ function PostHeader(props) {
       <strong>
         {props.post.read ? <s>{props.post.title}</s> : props.post.title}
       </strong>
-      <Button onClick={() => props.onRemove(props.post.id)}>Remover</Button>
+      <Button 
+      onClick={() => props.onRemove(props.post.id)}
+      >
+        Remover
+      </Button>
     </>
   );
 }
