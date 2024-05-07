@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Post from "./Post";
+import Post from "./components/post/Post.jsx";
 import Header from "./Header.jsx";
 
-import { ThemeProvider } from "./ThemeContext";
+import { ThemeProvider } from "./context/ThemeContext.jsx";
 
 
 function Index() {
@@ -46,7 +46,7 @@ function Index() {
       },
     ]);
 
-    console.log(posts);
+    // console.log(posts);
   }
 
   function handleRemovePost(postId) {
