@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Post from "./components/post/Post.jsx";
-import Header from "./Header.jsx";
-
-import { ThemeProvider } from "./context/ThemeContext.jsx";
+import Post from "../post/Post.jsx";
+import Header from "../../Header.jsx";
+import {Title} from "./styles.jsx";
+import { ThemeProvider } from "../../context/ThemeContext.jsx";
 
 
 function Index() {
@@ -53,15 +53,18 @@ function Index() {
     setPosts((prevState) => prevState.filter((post) => post.id !== postId));
   }
 
+
+
+
   return (
     <ThemeProvider>
 
 
       <Header title="Carser's Blog" >
-        <h2>
+        <Title as="h2">
           Posts da Semana
           <button onClick={handleRefresh}>Atualizar</button>
-        </h2>
+        </Title>
       </Header>
 
 

@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import PostHeader from "./PostHeader";
 
+import {Subtitle, Rate} from './styles';
+
+
+
 function Post(props) {
   return (
     <>
@@ -15,13 +19,10 @@ function Post(props) {
             }}
         />
 
-
-        <br />
-        
     
-        <small>{props.post.subtitle}</small> <br />
+        <Subtitle>{props.post.subtitle}</Subtitle> 
         
-        Média : {props.post.likes / 2} <br />
+        <Rate>Média : {props.post.likes / 2} </Rate>
       </article>
       <br />
     </>
