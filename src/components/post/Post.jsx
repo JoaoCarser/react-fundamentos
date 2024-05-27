@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import PostHeader from "./PostHeader";
 
-import {Subtitle, Rate} from './styles';
+import {Container, Subtitle, Rate} from './styles';
 
 
 
 function Post(props) {
   return (
     <>
-      <article>
+      <Container removed={props.post.removed}>
         <PostHeader 
             onRemove={props.onRemove}
             post={{
@@ -23,8 +23,7 @@ function Post(props) {
         <Subtitle>{props.post.subtitle}</Subtitle> 
         
         <Rate>Média : {props.post.likes / 2} </Rate>
-      </article>
-      <br />
+      </Container>
     </>
   );
 }
@@ -37,7 +36,7 @@ Post.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     likes: PropTypes.number.isRequired,
-    read: PropTypes.bool.isRequired,
+    removed: PropTypes.bool.isRequired,
   }).isRequired,
 };
 

@@ -14,21 +14,21 @@ function Index() {
       title: "Titulo 1",
       subtitle: "Subtitle 1",
       likes: 20,
-      read: false,
+      removed: false,
     },
     {
       id: Math.random(),
       title: "Titulo 2",
       subtitle: "Subtitle 2",
       likes: 10,
-      read: true,
+      removed: true,
     },
     {
       id: Math.random(),
       title: "Titulo 3",
       subtitle: "Subtitle 3",
       likes: 50,
-      read: false,
+      removed: false,
     },
   ]);
 
@@ -46,11 +46,12 @@ function Index() {
       },
     ]);
 
-    // console.log(posts);
   }
 
   function handleRemovePost(postId) {
-    setPosts((prevState) => prevState.filter((post) => post.id !== postId));
+    setPosts((prevState) => prevState.map((post) => 
+      post.id === postId ? {...post, removed: true} : post
+    ));
   }
 
 
