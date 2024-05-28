@@ -7,7 +7,7 @@ function PostHeader(props) {
   return (
     <>
       <strong>
-        {props.post.read ? <s>{props.post.title}</s> : props.post.title}
+        {props.post.removed ? <s>{props.post.title}</s> : props.post.title}
       </strong>
       <Button 
       onClick={() => props.onRemove(props.post.id)}
@@ -24,7 +24,7 @@ PostHeader.propTypes = {
   post: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    read: PropTypes.bool.isRequired,
+    removed: PropTypes.bool.isRequired,
   }).isRequired,
 };
 

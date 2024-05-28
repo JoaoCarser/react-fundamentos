@@ -15,7 +15,7 @@ function Post(props) {
             post={{
                 id: props.post.id,
                 title: props.post.title,
-                read: props.post.read,
+                removed: props.post.removed,
             }}
         />
 

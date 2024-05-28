@@ -49,9 +49,11 @@ function Index() {
   }
 
   function handleRemovePost(postId) {
+    
     setPosts((prevState) => prevState.map((post) => 
       post.id === postId ? {...post, removed: true} : post
-    ));
+    ))
+  
   }
 
 
